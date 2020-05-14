@@ -10,7 +10,7 @@ Commandes possibles:
     - !hello
     - !carapuce
     - !embed
-    - !play
+    - !play url_vidéo
 
     - Mot banni --> mp d'averissement
 """
@@ -66,4 +66,4 @@ async def on_message(message):
     music_client = await CobraMusic.get_client(message, client)
     await music_client.play(split[1])
 
-client.run ("NjkzMTIxNjE5NTI2MTU2MzI4.Xr0GCw.OdDmK1yvgelFMyFSro7XTwwTbwc")
+client.run ("TOKEN")

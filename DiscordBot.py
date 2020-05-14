@@ -46,18 +46,18 @@ async def on_message(message):
     em.set_image(url="https://cdn.discordapp.com/attachments/"+"567630033246617621/581496185424969749/1733852_0.jpg")
     await message.channel.send(embed=em)
 
-
-  msgNO=False
-  for word in BAN_WORDS:
-    if word in message.content.lower():
-        msgNO=True
-        break
-  if message.author != client.user and msgNO==True:
-    print("ALERTE: MOT INTERDIT UTILISE")
-    await message.delete()
-    ID= message.author.id
-    print(ID)
-    await message.author.send("ATTENTION : Sur le serveur"+ message.guild.name +", vous avez envoyé le message : "+ message.content +". Ce message contient le mot interdit "+ word +". Veuillez ne pas renvoyer de message contenant de mot interdit sur ce serveur")
+  if message.content!="!carapuce":
+    msgNO=False
+    for word in BAN_WORDS:
+      if word in message.content.lower():
+          msgNO=True
+          break
+    if message.author != client.user and msgNO==True:
+      print("ALERTE: MOT INTERDIT UTILISE")
+      await message.delete()
+      ID= message.author.id
+      print(ID)
+      await message.author.send("ATTENTION : Sur le serveur"+ message.guild.name +", vous avez envoyé le message : "+ message.content +". Ce message contient le mot interdit "+ word +". Veuillez ne pas renvoyer de message contenant de mot interdit sur ce serveur")
 
 
   if "!play " in message.content:
@@ -66,4 +66,4 @@ async def on_message(message):
     music_client = await CobraMusic.get_client(message, client)
     await music_client.play(split[1])
 
-client.run ("TOKEN")
+client.run ("NjkzMTIxNjE5NTI2MTU2MzI4.Xr0GCw.OdDmK1yvgelFMyFSro7XTwwTbwc")

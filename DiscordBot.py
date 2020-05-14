@@ -66,4 +66,4 @@ async def on_message(message):
     music_client = await CobraMusic.get_client(message, client)
     await music_client.play(split[1])
 
-client.run ("NjkzMTIxNjE5NTI2MTU2MzI4.Xn4fTQ.Qim7szHXZ3s4hlILQiSYBOkWzbA")
+client.run ("TOKEN")
